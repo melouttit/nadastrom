@@ -1,0 +1,153 @@
+/*
+SITE: nadastrom.com
+AUTHOR: meghan louttit
+VER: 2
+*/
+html, body{
+  margin:0;
+  padding:0;
+}
+.container{
+  width:100%;
+}
+.container ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+/*.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix{
+  display:inline-block;
+}*/
+
+/*cover image*/
+.container #bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:99;
+}
+.container #bg-image img{}
+.container .main{
+  z-index:100;
+  position:relative;
+  width:90%;
+  margin:0 auto;
+}
+
+/*header*/
+.container header ul.nav-list{
+  width:90%;
+  height:32px;
+  margin:20px auto;
+}
+.container header ul.nav-list li{
+  float:left;
+  width:15%;
+  padding:10px 0;
+  cursor:pointer;
+  text-align:center;
+  text-transform:uppercase;
+  font-family:impact,helvetica,sans-serif;
+  font-size:22px;
+  line-height:32px;
+  color:#000;
+  -webkit-transition:color .2s ease-in;
+  -moz-transition:color .2s ease-in;
+  -ms-transition:color .2s ease-in;
+  -o-transition:color .2s ease-in;
+  transition:color .2s ease-in;
+}
+.container header ul.nav-list li#banner{
+  width:40%;
+  padding:0;
+  opacity:.7;
+  -webkit-transition:opacity .2s ease-in;
+  -moz-transition:opacity .2s ease-in;
+  -ms-transition:opacity .2s ease-in;
+  -o-transition:opacity .2s ease-in;
+  transition:opacity .2s ease-in;
+}
+.container header ul.nav-list li:hover,
+.container header ul.nav-list li#banner:hover{
+  color:teal;
+  opacity:1;
+}
+.container header ul.nav-list li img{
+  width:85%;
+  margin:0 auto;
+}
+
+/*content*/
+
+/*footer*/
+.container footer{
+  position:relative;
+  bottom:0;
+  z-index:101;
+}
+.container footer > div{
+  background:rgba(0,0,0,.7);
+}
+.container footer:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.container footer h3{
+  font-family:impact,helvetica,sans-serif;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#333;
+  font-size:16px;
+  line-height:22px;
+}
+.container footer h4{
+  font-family:helvetica,arial,sans-serif;
+  text-transform: uppercase;
+  font-size:16px;
+  line-height:22px;
+  font-weight:normal;
+  color:#fff;
+}
+.container footer #contact-box{
+  position:absolute;
+  width:40%;
+}
+.container footer #contact-box ul li{
+  font-family:helvetica,arial,sans-serif;
+  font-size:13px;
+  line-height:18px;
+  color:#fff;
+}
+.container footer #contact-box ul li a{
+  color:teal;
+  text-decoration: none;
+}
+.container footer #contact-box ul li a:hover{
+  text-decoration: underline;
+}
+.container footer .yeti{
+  position:absolute;
+  left:40%;
+  width:20%;
+}
+.container footer .yeti img{
+  display:block;
+  width:40%;
+  margin:auto;
+}
+.container footer #radio-box{
+  position:absolute;
+  left:60%;
+  width:40%;
+}
