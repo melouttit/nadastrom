@@ -1,0 +1,151 @@
+.sc-player {
+  font: 12px Arial, sans-serif;
+  color: #333;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: bold;
+  
+}
+
+.sc-player.special {
+  border: 2px solid #ff3300;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.sc-player a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* scrubber */
+
+.sc-scrubber {
+
+}
+
+.sc-scrubber .sc-time-span {
+  background-color: #fff;
+}
+
+.sc-scrubber .sc-time-span img {
+  height: 30px;
+  width: 100%;
+  background-color: #000;
+}
+
+.sc-scrubber .sc-buffer, .sc-scrubber .sc-played {
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+.sc-scrubber .sc-played {
+  background-color: #000;
+  opacity: 0.4;
+}
+
+/* controls */
+.player .player-title{
+  font-family:georgia,"times new roman",serif;
+  font-size:12px;
+  font-style:italic;
+}
+
+.sc-player .sc-controls a.sc-play {
+  color: transparent;
+  background: url('http://files.nadastrom.com/images/player/button-play.gif') no-repeat 0 0;
+}
+.sc-player .sc-controls a.sc-next{
+  color: transparent;
+  background: url('http://files.nadastrom.com/images/player/button-next.gif') no-repeat 0 0;
+}
+.sc-player .sc-controls a.sc-prev{
+  color: transparent;
+  background: url('http://files.nadastrom.com/images/player/button-prev.gif') no-repeat 0 0;
+}
+.sc-player .sc-controls .empty{
+  opacity:.5;
+  cursor:default;
+}
+.sc-player .sc-controls a.sc-pause {
+  background: url('http://files.nadastrom.com/images/player/button-play.gif') no-repeat 0 0;
+}
+
+.sc-player .sc-controls a.sc-pause:hover{
+  opacity:.7;
+}
+
+.sc-player.playing .sc-controls a.sc-pause{
+  background: url('http://files.nadastrom.com/images/player/button-pause.gif') no-repeat 0 0;
+}
+
+.sc-player.playing .sc-controls a.sc-pause:hover{
+  opacity:.7;
+}  
+.sc-time, .sc-time .sc-time-indicators span{
+  color: #fff;
+  padding: 5px 0;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+/* Track listings*/
+
+.sc-player ol.sc-trackslist li.active, .sc-player ol.sc-trackslist li:hover {
+  background-color: #000;
+  color: #fff;
+}
+.sc-player ol.sc-trackslist li.active{
+  background-color: #4a4747;
+  border:1px solid #575757;
+  padding:3px;
+}
+.sc-player ol.sc-trackslist li.active a {
+  color: #fff;
+  font-size:12px;
+  font-weight:normal;
+  font-family:arial,helvetica,sans-serif;
+}
+
+.sc-track-duration {
+  text-align: right;
+  float: right;
+  padding: 0 5px;
+  margin-left: 5px;
+  display: none;
+}
+
+/* Track info*/
+
+.sc-player .sc-info{
+  background: #000;
+  opacity: 0.9;
+  display:none;
+}
+
+.sc-player .sc-info-toggle{
+  background: #000;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-box-shadow: 1px 1px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 4px #ccc;
+  padding: 4px;
+}
+
+.sc-player .sc-info-toggle:hover{
+  background: #003399;
+  color: #eee;
+}
+
+.sc-player .sc-info-close{
+  background: #003399;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+}

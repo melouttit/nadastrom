@@ -6,9 +6,18 @@ VER: 2
 html, body{
   margin:0;
   padding:0;
+  height:100%;
+  width:100%;
+}
+html{
+  overflow:hidden;
+}
+.hide{
+  display:none;
 }
 .container{
   width:100%;
+  height:100%;
 }
 .container ul{
   list-style:none;
@@ -27,6 +36,32 @@ html, body{
   display:inline-block;
 }*/
 
+/*animations*/
+.opacity{
+  -webkit-transition:opacity .2s ease-in;
+  -moz-transition:opacity .2s ease-in;
+  -ms-transition:opacity .2s ease-in;
+  -o-transition:opacity .2s ease-in;
+  transition:opacity .2s ease-in;
+}
+.color{
+  -webkit-transition:color .4s ease-in;
+  -moz-transition:color .4s ease-in;
+  -ms-transition:color .4s ease-in;
+  -o-transition:color .4s ease-in;
+  transition:color .4s ease-in;
+}
+.yeti{
+  width: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.yeti img{
+  width:100%;
+  filter: grayscale(100%);
+}
+
 /*cover image*/
 .container #bg-image{
   width:100%;
@@ -40,12 +75,27 @@ html, body{
 .container .main{
   z-index:100;
   position:relative;
-  width:90%;
-  margin:0 auto;
+  width:100%;
+  height:100%;
+  margin:35% auto 0 auto;
 }
 
 /*header*/
-.container header ul.nav-list{
+.container header{
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top:55%;
+}
+.container header #banner{
+  width:100%;
+  position:relative;
+}
+.container header #banner img{
+  width:70%;
+  margin:0 auto;
+}
+/*.container header ul.nav-list{
   width:90%;
   height:32px;
   margin:20px auto;
@@ -70,12 +120,7 @@ html, body{
 .container header ul.nav-list li#banner{
   width:40%;
   padding:0;
-  opacity:.7;
-  -webkit-transition:opacity .2s ease-in;
-  -moz-transition:opacity .2s ease-in;
-  -ms-transition:opacity .2s ease-in;
-  -o-transition:opacity .2s ease-in;
-  transition:opacity .2s ease-in;
+  opacity:1;
 }
 .container header ul.nav-list li:hover,
 .container header ul.nav-list li#banner:hover{
@@ -85,12 +130,146 @@ html, body{
 .container header ul.nav-list li img{
   width:85%;
   margin:0 auto;
+}*/
+
+/*top nav*/
+nav#main{
+  margin-top:30px;
+  height:30px;
+}
+nav ul.nav-list{
+  width:70%;
+  margin:0 auto;
+}
+nav ul.nav-list li{
+  width:20%;
+  float:left;
+  color:#fff;
+  text-align:center;
+  font-family:sans-serif;
+  cursor:pointer;
+}
+nav ul.nav-list li a{
+  padding: 12px 20px;
+  border-radius: 5px;
+  background: #000;
+  color:#fff;
+  font-family:sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+nav ul.nav-list a:hover{
+  color:#f5e15c;
 }
 
 /*content*/
+.content{
+  width:100%;
+  height:100%;
+  background:#000;
+  position:absolute;
+  bottom:0;
+}
+.content section{
+}
+
+/*radio*/
+.radio{
+  z-index: 100000013;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  width:50%;
+}
+.radio .yeti-icon{
+  width:40px;
+  float:left;
+  margin-right:15px;
+}
+.radio .info{
+  width:300px;
+  float:left;
+}
+.radio .info nav{
+  margin-top:3px;
+}
+.radio .info h3,
+.radio .info h3 a{
+  margin:2px 0 0 0;
+  font-style:italic;
+  font-size:16px;
+  line-height:21px;
+  color:#000;
+  text-decoration: none;
+}
+.radio .info h3 a:before{
+  content:"Now Playing: ";
+}
+.radio .info nav i{
+  background-image:url(../images/radio-controls-sprite.png);
+  background-repeat:no-repeat;
+  overflow:hidden;
+  display:inline-block;
+  cursor:pointer;
+  margin-right:4px;
+}
+.radio .info nav i.prev{
+  width:28px;
+  height:22px;
+  background-position:-40px 0;
+}
+.radio .info nav i.next{
+  width:28px;
+  height:22px;
+  background-position:-66px 0;
+}
+.radio .info nav i.playpause,
+.radio .info nav i.playpause.pause:hover{
+  width:19px;
+  height:22px;
+  background-position:0 0;
+}
+.radio .info nav i.playpause:hover,
+.radio .info nav i.playpause.pause{
+  background-position:-20px 0;
+}
+
+/*social*/
+#social{
+  width:137px;
+  position:fixed;
+  top:2%;
+  right:1%;
+}
+#social ul{
+  width:100%;
+}
+#social ul li{
+  float:left;
+  margin-right:12px;
+  opacity:1;
+}
+#social ul li:last-child{
+  margin-right:0;
+}
+#social ul li img{
+  margin:0 auto;
+}
+#social ul li:hover{
+  opacity:.7;
+}
 
 /*footer*/
-.container footer{
+/*.container footer{
+  width:50px;
+  height:100%;
+  background:#000;
+  position:fixed;
+  z-index:10000000;
+}*/
+/*.container footer{
   position:relative;
   bottom:0;
   z-index:101;
@@ -150,4 +329,4 @@ html, body{
   position:absolute;
   left:60%;
   width:40%;
-}
+}*/

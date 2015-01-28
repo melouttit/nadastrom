@@ -17,11 +17,15 @@ $(document).ready(function(){
       $container = $('.container');
       $bgimgcont = $container.find('#bg-image');
       $bgimg = $bgimgcont.find('img');
+      $bannerimg = $('#banner img');
+
+      var socialul = $('#social ul');
+      var socialimg = $('#social ul li img');
 
       var bgimgwidth = yeti.chooseImageSize();
       yeti.sizeBackgroundImage(bgimgwidth);
+      yeti.centerBlock($bannerimg);
       $(window).resize(function(){
-        console.log("RESIZE");
         var bgimgwidth = yeti.chooseImageSize();
         yeti.sizeBackgroundImage(bgimgwidth);
       });
@@ -29,7 +33,6 @@ $(document).ready(function(){
     },
     chooseImageSize:function(){
 
-      console.log("CHOOSE IMAGE SIZE");
       var imgwidths = $bgimg.data().widths;
       var ww = $(window).width();
       var closestwidth = null;
@@ -45,7 +48,7 @@ $(document).ready(function(){
 
         if(width > ww && difference < target){
           closestwidth = width;
-        }
+        } 
 
       });
 
@@ -54,13 +57,16 @@ $(document).ready(function(){
     },
     sizeBackgroundImage:function(size){
 
-      console.log("SIZE BACKGROUND IMAGE");
       var imgpath = $bgimg.data().path;
       var imgratio = $bgimg.data().ratio;
 
       //replace image src for right sized image
-      $bgimg.attr('src',imgpath+size+'.jpg');
-
+      if(size !== null){
+        $bgimg.attr('src',imgpath+size+'.jpg');
+      } else {
+        $bgimg.attr('src',imgpath+'300.jpg');
+      }
+      
       //window vars
       var ww = $(window).width();
       var wh = $(window).height();
@@ -87,6 +93,19 @@ $(document).ready(function(){
         height:ih+'px',
         marginLeft:'-'+ml+'px',
         marginTop:'-'+mt+'px'
+      });
+
+    },
+    centerBlock:function(img){
+
+      var ww = $(window).width();
+      var iw = $(img).width();
+
+      var extra = ww - iw;
+      var marginLeft = extra / 2;
+
+      $(img).css({
+        marginLeft:marginLeft+'px'
       });
 
     }

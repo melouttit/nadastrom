@@ -6,7 +6,8 @@
 
   <link rel="shortcut icon" href="images/yeti.png" />
   <link rel="stylesheet" href="css/styles.css" />
-<!--   <link rel="stylesheet" href="http://files.nadastrom.com/soundcloud-custom-player/css/sc-player-minimal.css" type="text/css">
+  <link rel="stylesheet" href="css/soundcloud.css" type="text/css">
+  <!--<link rel="stylesheet" href="http://files.nadastrom.com/soundcloud-custom-player/css/sc-player-minimal.css" type="text/css">
   <link rel="stylesheet" href="http://files.nadastrom.com/tumblrJSON/tumblr.css" type="text/css" media="screen" />
   <link rel="stylesheet" type="text/css" href="http://files.nadastrom.com/tumblrJSON/default.css"/> -->
 
@@ -28,48 +29,88 @@
 <div class="container">
 
   <div id="bg-image">
-    <img src="images/transparent.png" data-path="images/cover/nadastrom_" data-ratio=".688125" data-widths="[400,600,800,1024,1280,1600]"/>
+    <img src="images/transparent.png" data-path="images/cover/nadastrom-yellow_" data-ratio=".688125" data-widths="[400,600,800,1024,1280,1600]"/>
+  </div>
+
+  <div class="radio">
+    <img class="yeti-icon" src="images/yeti-black.png" />
+<!--     <div class="info">
+      <h3>Now Playing</h3>
+      <nav>
+        <i class="prev"></i>
+        <i class="playpause"></i>
+        <i class="next"></i>
+      </nav>
+    </div> -->
+
+    <!--test player-->
+    <div class="player info">
+      <a href="http://soundcloud.com/nadastrom/sets/website-player/" class="sc-player"><!--PLAYER IFRAME GOES HERE--></a>
+    </div>
   </div>
 
   <div class="main">
+
     <header>
-      <ul class="nav-list">
-        <li>About</li>
-        <li>Music</li>
-        <li id="banner"><img src="images/banner.png" /></li>
-        <li>Shows</li>
-        <li>News</li>
-      </ul>
+
+      <div id="banner">
+        <img src="images/nadastrom-newlogo-black.png" />
+      </div>
+
+      <nav id="main">
+        <ul class="nav-list">
+            <li id="about"><a href="#about" class="color">About</a></li>
+            <li id="shows"><a href="#shows" class="color">Shows</a></li>
+            <li id="news"><a href="#news" class="color">News</a></li>
+            <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
+            <li id="press"><a href="#press" class="color">Press</a></li>
+        </ul>
+      </nav>
+
+      <div id="social">
+        <ul>
+          <li class="opacity"><a href=""><img src="images/social/facebook.png"></a></li>
+          <li class="opacity"><a href=""><img src="images/social/twitter.png"></a></li>
+          <li class="opacity"><a href=""><img src="images/social/soundcloud.png"></a></li>
+          <li class="opacity"><a href=""><img src="images/social/instagram.png"></a></li>
+        </ul>
+      </div>
+
     </header>
-
-    <div class="content">
-
-      <section id="about">
-        <h2>About</h2>
-        <p>Bio goes here.</p>
-      </section>
-
-      <section id="music">
-        <h2>Music</h2>
-        <p>Soundcloud embed goes here.</p>
-      </section>
-
-      <section id="shows">
-        <h2>Shows</h2>
-        <p>Bandsintown embed goes here.</p>
-      </section>
-
-      <section id="news">
-        <h2>News</h2>
-        <p>Tumblr feed goes here.</p>
-        <p><a href="">Go to archive &raquo;</a></p>
-      </section>
-
-    </div>
 
   </div>
 
-  <footer class="clearfix">
+
+  <div class="content hidden">
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Bio goes here.</p>
+    </section>
+
+      <!-- <section id="music">
+        <h2><a href="https://soundcloud.com/nadastrom" target="_blank">Music</a></h2>
+      </section> -->
+
+    <section id="shows">
+      <h2>Shows</h2>
+      <p>Bandsintown embed goes here.</p>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <p>Tumblr feed goes here.</p>
+        <!-- <p><a href="">Go to archive &raquo;</a></p> -->
+    </section>
+
+  </div>
+    <!-- <footer class="clearfix">
+      <div class="yeti">
+        <img class="yeti-icon" src="images/yeti-black.png" />
+      </div>
+    </footer> -->
+
+<!--   <footer class="clearfix">
     <div id="contact-box">
         <h3>Contact</h3>
         <ul class="contact-list">
@@ -85,12 +126,15 @@
       <div id="radio-box">
         <h4>Nadastrom Radio</h4>
       </div>
-    </footer>
+    </footer> -->
 
 </div>
 
 </body>
 
 <script type="text/javascript" src="js/script.js"></script>
+<!-- <script type="text/javascript" src="js/hp-player.js"></script> -->
+<script type="text/javascript" src="../soundcloud-custom-player/js/soundcloud.player.api.js"></script>
+<script type="text/javascript" src="../soundcloud-custom-player/js/sc-player.js"></script>
 
 </html>
