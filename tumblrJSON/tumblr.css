@@ -1,0 +1,226 @@
+/* Tumblr */
+#tumblrFeed
+{
+	color: #333333;
+}
+#tumblrFeed a {
+	color:#aa0000;
+	text-decoration:none;
+}
+#tumblrFeed table{
+	border: 0;
+	border-bottom: 1px solid dcdcdc;
+}
+
+#tumblrFeed a:hover {
+	text-decoration:underline;
+}
+#tumblrFeed .date 
+{
+	color: #999999;
+	font-size: 0.8em;
+}
+#tumblrFeed .icon
+{
+	border:0;
+	padding:0;
+	margin:0 3px;	
+}
+#tumblrFeed .title 
+{
+	font-size: 0.95em;
+	font-weight: bold;
+}
+#tumblrFeed .body 
+{
+	font-size: 0.9em;
+}
+#tumblrFeed img 
+{
+	border:1px solid #999999;
+	padding: 4px;
+	background: #FFF;	
+	margin:5px 0;	
+	max-width: 120px;
+}
+#tumblrFeed .quote
+{
+	font-size: 0.9em;
+	background:#F4F5F7 url(http://chris-tran.com/images/reverb/blockquote.gif) 3px 3px no-repeat;
+	padding:8px 12px 8px 36px;
+	margin:5px 0;		
+	border:1px dashed #dcdcdc;	
+}
+#tumblrFeed .quotesrc
+{
+	font-size: 0.9em;	
+	color: #999999;
+	font-style: italic;
+}
+#tumblrFeed .convlabel
+{
+	font-size: 0.9em;
+	font-weight: bold;
+	margin:5px;		
+}
+#tumblrFeed .convtext
+{
+	font-size: 0.9em;
+	background:#F4F5F7 url(http://chris-tran.com/images/reverb/blockquote.gif) 3px 3px no-repeat;
+	padding:8px 12px 8px 36px;
+	margin:5px 0;		
+	border:1px dashed #dcdcdc;
+}
+#tumblrFeed .videosrc
+{
+	font-size: 0.9em;	
+	color: #999999;
+	font-style: italic;
+}
+
+/* feeds */
+#nadastromNewsFeed div.date, #nadastromMusicFeed div.date, #nadastromNewsPageFeed div.date{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+	color: white;
+	width: 60px;
+	border: 0;
+	float: left;
+	text-align: center;
+	margin-right:15px;
+	margin-bottom:8px;
+}
+#nadastromNewsFeed a.title, #nadastromNewsFeed div.quote, #nadastromMusicFeed a.title, #nadastromMusicFeed div.quote{
+	text-align: center;
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom:10px;
+}
+#nadastromNewsFeed div.quote, #nadastromMusicFeed div.quote{
+	color:#fff;
+}
+#nadastromNewsFeed div.video-caption{
+	width:240px;
+	float:left;
+	margin-top:10px;
+}
+#nadastromNewsFeed div.video-caption p{
+	top:-10px;
+	color:#aa0000;
+	text-align:left;
+}
+#nadastromNewsFeed .clear{
+	height: 1px;
+	border-top: 1px solid #333;
+	padding-bottom: 8px;
+}
+#nadastromMusicFeed img, #nadastromNewsFeed img{
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+#nadastromNewsFeed p, #nadastromShowsFeed p, #nadastromMusicFeed p{
+	position:relative;
+	top:-25px;
+}
+#nadastromNewsPageFeed div.date{
+	color:#000;
+	text-align:right;
+}
+#nadastromNewsPageFeed .title{
+	font-size:30px;
+	line-height:30px;
+	color:#000;
+	margin-bottom:15px;
+	font-family:arial,helvetica,sans-serif;
+}
+#nadastromNewsPageFeed .post{
+	width:75px;
+	float:left;
+}
+#nadastromNewsPageFeed .post .for_permalink{
+	padding-top:15px;
+}
+#nadastromNewsPageFeed .post-body{
+	width:608px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	font-family:georgia,"times new roman",serif;
+	font-size:14px;
+	line-height:20px;
+	color:#333;
+	padding-left:75px;
+}
+#nadastromNewsPageFeed .post-body .media img{
+	padding-top:15px;
+}
+#nadastromNewsPageFeed .post p{
+	margin:10px 0;
+	color:#333;
+}
+#nadastromNewsPageFeed{
+	margin:30px 0 60px 0;
+}
+#nadastromNewsPageFeed #navigation{
+	font-family:arial,helvetica,sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+#nadastromNewsPageFeed #archive-link, #nadastromNewsPageFeed #more-news{
+	width:684px;
+	text-transform:uppercase;
+	font-family:arial,helvetica,sans-serif;
+	font-size:10px;
+	margin:10px 0;
+}
+#nadastromNewsPageFeed #more-news{
+	margin-bottom:3px;
+}
+#nadastromNewsPageFeed .share-tools{
+	width: 50px;
+	float: right;
+	margin-right: 9px;
+	margin-top: 5px;
+}
+#nadastromNewsPageFeed .stButton .chicklets{
+	padding-left:16px;
+	padding-right:0;
+}
+#nadastromNewsPageFeed .notecontainer{
+	margin-left: 75px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#nadastromNewsPageFeed .notecontainer li.note span{
+	font-family:arial,helvetica,sans-serif;
+}
+
+/* Expander */
+#tumblrFeed .read-more
+{
+	font-size: 0.9em;
+}
+#tumblrFeed .re-collapse
+{
+	font-size: 0.9em;
+}
+
+/* Homepage Player */
+.tracks {
+  display: none; }
+
+.play {
+  display: block; }
+
+.pause {
+  display: none; }
+
+.playing .play {
+  display: none; }
+.playing .pause {
+  display: block; }

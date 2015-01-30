@@ -28,7 +28,12 @@ $(document).ready(function(){
       $(window).resize(function(){
         var bgimgwidth = yeti.chooseImageSize();
         yeti.sizeBackgroundImage(bgimgwidth);
+        yeti.centerBlock($bannerimg);
       });
+
+      setTimeout(function(){
+        yeti.newsCarousel();
+      },5000);
 
     },
     chooseImageSize:function(){
@@ -107,6 +112,31 @@ $(document).ready(function(){
       $(img).css({
         marginLeft:marginLeft+'px'
       });
+
+    },
+    newsCarousel:function(){
+
+      var newsItems = $('#nadastromNewsFeed div');
+      $activeItem = 0;
+      $newsLength = newsItems.length;
+      switchNewsItem();
+
+      $('span.arrow').on('click',function(){
+        console.log("CLICK");
+        $activeItem = ($(this).hasClass('next')) ? $activeItem + 1 : $activeItem - 1;
+        console.log($activeItem);
+        switchNewsItem();
+      });
+
+      function switchNewsItem(){
+        _.each(newsItems,function(item,index){
+          if(index == $activeItem){
+            $(item).addClass('active-item');
+          } else {
+            $(item).removeClass('active-item');
+          }
+        });
+      }
 
     }
 
