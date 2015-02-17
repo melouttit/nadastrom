@@ -8,19 +8,15 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/soundcloud.css" type="text/css">
   <link rel="stylesheet" href="/tumblrJSON/tumblr.css" type="text/css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="/tumblrJSON/default.css"/>
+  <link rel="stylesheet" type="text/css" href="../tumblrJSON/default.css"/>
 
   <!--libs-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="js/backbone-min.js"></script>
+  <!--<script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/backbone-min.js"></script>-->
+  <script type="text/javascript" src="js/ba-bbq.min.js"></script>
   <!--plugins
-  <script type="text/javascript" src="http://files.nadastrom.com/js/jquery.ba-hashchange.min.js"></script>-->
-
-  <!--Tumblr Feed Scripts-->
-  <script type="text/javascript" src="/tumblrJSON/date.js"></script>
-  <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?16"></script>
-  <script type="text/javascript" src="/tumblrJSON/tumblr.js"></script>
+  <script type="text/javascript" src="http://files.nadastrom.com/js/ba-hashchange.min.js"></script>-->
 
 </head>
 
@@ -28,88 +24,80 @@
 
 <div class="container">
 
-  <div id="bg-image">
-    <img src="images/transparent.png" data-path="images/cover/nadastrom-yellow_" data-ratio=".688125" data-widths="[400,600,800,1024,1280,1600]"/>
-  </div>
-
-  <div class="radio">
-    <img class="yeti-icon" src="images/yeti-black.png" />
-<!--     <div class="info">
-      <h3>Now Playing</h3>
-      <nav>
-        <i class="prev"></i>
-        <i class="playpause"></i>
-        <i class="next"></i>
-      </nav>
-    </div> -->
-
-    <!--test player-->
-    <div class="player info">
-      <a href="http://soundcloud.com/nadastrom/sets/website-player/" class="sc-player"><!--PLAYER IFRAME GOES HERE--></a>
-    </div>
-  </div>
+  <nav id="inside-top">
+    <a href=''><img src="images/nadastrom-newlogo-black.png" /></a>
+    <ul class="nav-list">
+      <li id="about"><a href="#about" class="color">About</a></li>
+      <li id="shows"><a href="#shows" class="color">Shows</a></li>
+      <li id="news"><a href="#news" class="color">News</a></li>
+      <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
+      <li id="press"><a href="#press" class="color">Press</a></li>
+    </ul>
+  </nav>
 
   <div class="main">
 
-    <header>
+    <div class="content bbq-content">
+      <section id="home" class="bbq-default">
+        <div id="bg-image">
+          <img src="images/transparent.png" data-path="images/cover/nadastrom-yellow_" data-ratio=".688125" data-widths="[400,600,800,1024,1280,1600]"/>
+        </div>
 
-      <div id="banner">
-        <img src="images/nadastrom-newlogo-black.png" />
+        <div class="radio">
+          <img class="yeti-icon" src="images/yeti-black.png" />
+      <!--     <div class="info">
+            <h3>Now Playing</h3>
+            <nav>
+              <i class="prev"></i>
+              <i class="playpause"></i>
+              <i class="next"></i>
+            </nav>
+          </div> -->
+
+          <!--test player-->
+          <div class="player info">
+            <a href="http://soundcloud.com/nadastrom/sets/website-player/" class="sc-player"><!--PLAYER IFRAME GOES HERE--></a>
+          </div>
+        </div>
+        <header>
+
+          <div id="banner">
+            <img src="images/nadastrom-newlogo-black.png" />
+          </div>
+
+          <div id="social">
+            <ul>
+              <li class="opacity"><a href="https://www.facebook.com/nadastrom"><img src="images/social/facebook.png"></a></li>
+              <li class="opacity"><a href="http://instagram.com/nadastrom"><img src="images/social/twitter.png"></a></li>
+              <!--<li class="opacity"><a href=""><img src="images/social/soundcloud.png"></a></li>-->
+              <li class="opacity"><a href="https://twitter.com/nadastrom"><img src="images/social/instagram.png"></a></li>
+            </ul>
+          </div>      
+
+          <nav id="main">
+            <ul class="nav-list">
+                <li id="about"><a href="#about" class="color">About</a></li>
+                <li id="shows"><a href="#shows" class="color">Shows</a></li>
+                <li id="news"><a href="#news" class="color">News</a></li>
+                <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
+                <li id="press"><a href="#press" class="color">Press</a></li>
+            </ul>
+          </nav>
+
+        </header>
+      </section>
+    </div>
+
+    <div id="featured-news" class="hidden">
+      <div id="featured-news-move">
+        <span class="arrow prev"><img class="arrow-left" src="images/left-arrow.png" /></span>
+        <div id="nadastromNewsFeed"></div>
+        <span class="arrow next"><img class="arrow-right" src="images/right-arrow.png" /></span>
       </div>
-
-      <div id="social">
-        <ul>
-          <li class="opacity"><a href=""><img src="images/social/facebook.png"></a></li>
-          <li class="opacity"><a href=""><img src="images/social/twitter.png"></a></li>
-          <li class="opacity"><a href=""><img src="images/social/soundcloud.png"></a></li>
-          <li class="opacity"><a href=""><img src="images/social/instagram.png"></a></li>
-        </ul>
-      </div>      
-
-      <nav id="main">
-        <ul class="nav-list">
-            <li id="about"><a href="#about" class="color">About</a></li>
-            <li id="shows"><a href="#shows" class="color">Shows</a></li>
-            <li id="news"><a href="#news" class="color">News</a></li>
-            <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
-            <li id="press"><a href="#press" class="color">Press</a></li>
-        </ul>
-      </nav>
-
-    </header>
-
-    <div id="featured-news">
-      <span class="arrow prev">PREV</span>
-      <div id="nadastromNewsFeed"></div>
-      <span class="arrow next">NEXT</span>
     </div>
 
   </div>
 
-
-  <div class="content hidden">
-
-    <section id="about">
-      <h2>About</h2>
-      <p>Bio goes here.</p>
-    </section>
-
-      <!-- <section id="music">
-        <h2><a href="https://soundcloud.com/nadastrom" target="_blank">Music</a></h2>
-      </section> -->
-
-    <section id="shows">
-      <h2>Shows</h2>
-      <p>Bandsintown embed goes here.</p>
-    </section>
-
-    <section id="news">
-      <h2>News</h2>
-      <p>Tumblr feed goes here.</p>
-        <!-- <p><a href="">Go to archive &raquo;</a></p> -->
-    </section>
-
-  </div>
     <!-- <footer class="clearfix">
       <div class="yeti">
         <img class="yeti-icon" src="images/yeti-black.png" />
@@ -142,4 +130,8 @@
 <script type="text/javascript" src="../soundcloud-custom-player/js/soundcloud.player.api.js"></script>
 <script type="text/javascript" src="../soundcloud-custom-player/js/sc-player.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<!--Tumblr Feed Scripts-->
+<script type="text/javascript" src="../../tumblrJSON/date.js"></script>
+<script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?16"></script>
+<script type="text/javascript" src="../../tumblrJSON/tumblr.js"></script>
 </html>

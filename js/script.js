@@ -18,6 +18,7 @@ $(document).ready(function(){
       $bgimgcont = $container.find('#bg-image');
       $bgimg = $bgimgcont.find('img');
       $bannerimg = $('#banner img');
+      $insideTop = $('nav#inside-top');
 
       var socialul = $('#social ul');
       var socialimg = $('#social ul li img');
@@ -31,9 +32,53 @@ $(document).ready(function(){
         yeti.centerBlock($bannerimg);
       });
 
-      setTimeout(function(){
-        yeti.newsCarousel();
-      },5000);
+      yeti.pageManager();
+
+      // setTimeout(function(){
+      //   yeti.newsCarousel();
+      // },3000);
+
+    },
+    pageManager:function(){
+
+      var cache = {
+        '':$('.bbq-default')
+      }
+
+      $(window).bind('hashchange',function(e){
+
+        var url = $.param.fragment();
+
+        $('a.bbq-current').removeClass('bbq-current');
+        $('.bbq-content').children(':visible').hide();
+        url && $('a[href="#'+url+'"]').addClass('bbq-current');
+
+        if(cache[url]){
+          cache[url].show();
+        } else {
+          $('.bbq-loading').show();
+          cache[url] = $('<section class="bbq-item"/>')
+            .appendTo('.bbq-content')
+            .load(url,function(){
+              $('.bbq-loading').hide();
+            });
+        }
+
+        if(url === 'news'){
+            $('#featured-news-move').appendTo('#featured-news-container');
+          } else if(url === '') {
+            $('#featured-news-move').appendTo('#featured-news');
+          }
+
+          if(url === ''){
+            $insideTop.hide();
+          }else{
+            $insideTop.show();
+          }
+
+      });
+
+      $(window).trigger('hashchange');
 
     },
     chooseImageSize:function(){
@@ -116,23 +161,32 @@ $(document).ready(function(){
     },
     newsCarousel:function(){
 
-      var newsItems = $('#nadastromNewsFeed div');
+      $newsFeed = $('#nadastromNewsFeed');
+      $newsItems = $('#nadastromNewsFeed div');
       $activeItem = 0;
-      $newsLength = newsItems.length;
+      $newsLength = $newsItems.length;
+      var leftArrow = $('span.arrow.prev');
+      var rightArrow = $('span.arrow.next');
       switchNewsItem();
 
       $('span.arrow').on('click',function(){
-        console.log("CLICK");
         $activeItem = ($(this).hasClass('next')) ? $activeItem + 1 : $activeItem - 1;
+
+        if($activeItem < 0){
+          $activeItem = 0;
+          $
+        } else if($activeItem > $newsLength){
+          $activeItem = $newsLength ;
+        }
         console.log($activeItem);
         switchNewsItem();
       });
 
       function switchNewsItem(){
-        _.each(newsItems,function(item,index){
+        _.each($newsItems,function(item,index){
           if(index == $activeItem){
             $(item).addClass('active-item');
-          } else {
+          } else if($activeItem >= 0 && $activeItem < $newsLength) {
             $(item).removeClass('active-item');
           }
         });
