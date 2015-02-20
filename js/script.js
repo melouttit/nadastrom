@@ -41,6 +41,8 @@ $(document).ready(function(){
     },
     pageManager:function(){
 
+      var yeti = this;
+
       var cache = {
         '':$('.bbq-default')
       }
@@ -57,7 +59,7 @@ $(document).ready(function(){
           cache[url].show();
         } else {
           $('.bbq-loading').show();
-          cache[url] = $('<section class="bbq-item"/>')
+          cache[url] = $('<section id="page-'+url+'" class="bbq-item"/>')
             .appendTo('.bbq-content')
             .load(url,function(){
               $('.bbq-loading').hide();
@@ -66,19 +68,41 @@ $(document).ready(function(){
 
         if(url === 'news'){
             $('#featured-news-move').appendTo('#featured-news-container');
-          } else if(url === '') {
+            $('#featured-news').removeClass('hidden');
+          } else {
             $('#featured-news-move').appendTo('#featured-news');
+            $('#featured-news').addClass('hidden');
           }
 
           if(url === ''){
             $insideTop.hide();
+            $('html,body').addClass('home');
+            $('html,body').removeClass('inside');
           }else{
             $insideTop.show();
+            $('html,body').removeClass('home');
+            $('html,body').addClass('inside');
           }
+
+          yeti.updateNav(url);
 
       });
 
       $(window).trigger('hashchange');
+
+    },
+    updateNav:function(page){
+
+      var insideNavLinks = $('#inside-top ul.nav-list li');
+
+      $.each(insideNavLinks,function(index,navitem){
+        var navid = $(navitem).attr('id');
+        if(navid === page){
+          $(navitem).addClass('active');
+        } else {
+          $(navitem).removeClass('active');
+        }
+      });
 
     },
     chooseImageSize:function(){

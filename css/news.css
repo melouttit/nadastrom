@@ -1,0 +1,64 @@
+/*news carousel*/
+#featured-news{
+  width:100%;
+  position:fixed;
+  bottom:0;
+  background:#000;
+  height:60px;
+}
+#featured-news .body{
+  opacity:0;
+  position:absolute;
+  top:10px;
+  width:100%;
+  text-align:center;
+  -webkit-transition:opacity .4s ease-in;
+  -moz-transition:opacity .4s ease-in;
+  -ms-transition:opacity .4s ease-in;
+  -o-transition:opacity .4s ease-in;
+  transition:opacity .4s ease-in;
+}
+#featured-news .body.active-item{
+  opacity:1;
+}
+#featured-news .body time{
+  text-transform: uppercase;
+  font-family:'helvetica nueu',helvetica,arial,sans-serif;
+  color:#f5e15c;
+  display:inline-block;
+  margin-right:10px;
+  font-size:11px;
+  line-height:40px;
+}
+#featured-news #nadastromNewsFeed .body a{
+  font-family:georgia,"times new roman",serif;
+  font-size:17px;
+  line-height:40px;
+  color:#fff;
+  font-style:italic;
+}
+#featured-news span.arrow{
+  font-family:'helvetica nueu',helvetica,arial,sans-serif;
+  color:#666;
+  position:absolute;
+  top:10px;
+  line-height:40px;
+  display:block;
+  cursor:pointer;
+  z-index:100000000;
+  width:30px;
+  height:30px;
+}
+#featured-news span.arrow img{
+  display:inline-block;
+  width:30px;
+  height:30px;
+}
+#featured-news span.arrow.prev{
+  left:30px;
+}
+#featured-news span.arrow.prev i.arrow-left{}
+#featured-news span.arrow.next{
+  right:30px;
+}
+#featured-news span.arrow.next i.arrow-right{}
