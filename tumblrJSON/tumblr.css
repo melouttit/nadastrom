@@ -35,6 +35,7 @@
 {
 	font-size: 0.9em;
 }
+
 #tumblrFeed img 
 {
 	border:1px solid #999999;
@@ -116,8 +117,6 @@
 	padding-bottom: 8px;
 }
 #nadastromMusicFeed img, #nadastromNewsFeed img{
-	width: 50px;
-	float: left;
 	margin-right: 10px;
 	margin-bottom: 5px;
 }

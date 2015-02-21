@@ -19,6 +19,7 @@ $(document).ready(function(){
       $bgimg = $bgimgcont.find('img');
       $bannerimg = $('#banner img');
       $insideTop = $('nav#inside-top');
+      $headerHome = $('header#header-home');
 
       var socialul = $('#social ul');
       var socialimg = $('#social ul li img');
@@ -27,9 +28,7 @@ $(document).ready(function(){
       yeti.sizeBackgroundImage(bgimgwidth);
       yeti.centerBlock($bannerimg);
       $(window).resize(function(){
-        var bgimgwidth = yeti.chooseImageSize();
-        yeti.sizeBackgroundImage(bgimgwidth);
-        yeti.centerBlock($bannerimg);
+        yeti.resizeEvents();
       });
 
       yeti.pageManager();
@@ -38,6 +37,12 @@ $(document).ready(function(){
       //   yeti.newsCarousel();
       // },3000);
 
+    },
+    resizeEvents:function(){
+      var yeti = this;
+      var bgimgwidth = yeti.chooseImageSize();
+      yeti.sizeBackgroundImage(bgimgwidth);
+      yeti.centerBlock($bannerimg);
     },
     pageManager:function(){
 
@@ -66,25 +71,33 @@ $(document).ready(function(){
             });
         }
 
-        if(url === 'news'){
+        console.log(url);
+        if(url === ''){
+          $insideTop.hide();
+          $('html,body').addClass('home');
+          $('html,body').removeClass('inside');
+        }else{
+          $insideTop.show();
+          $('html,body').removeClass('home');
+          $('html,body').addClass('inside');
+        }
+
+        setTimeout(function(){
+          if(url === 'news'){
             $('#featured-news-move').appendTo('#featured-news-container');
             $('#featured-news').removeClass('hidden');
           } else {
             $('#featured-news-move').appendTo('#featured-news');
             $('#featured-news').addClass('hidden');
           }
+        },500);
 
-          if(url === ''){
-            $insideTop.hide();
-            $('html,body').addClass('home');
-            $('html,body').removeClass('inside');
-          }else{
-            $insideTop.show();
-            $('html,body').removeClass('home');
-            $('html,body').addClass('inside');
-          }
+        yeti.resizeEvents();
 
-          yeti.updateNav(url);
+        //scroll to top
+        $('html,body').scrollTop(0);
+
+        yeti.updateNav(url);
 
       });
 

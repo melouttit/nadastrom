@@ -10,12 +10,10 @@ html, body{
 }
 html.home, body.home{
   height:100%;
-}
-html{
   overflow:hidden;
 }
 body{
-  background-color  :#3d3d3d;
+  background-color:#3c3c3c;
 }
 .hidden{
   display:none;
@@ -93,6 +91,9 @@ body a:hover{
   height:100%;
   /*margin:35% auto 0 auto;*/
 }
+.inside .container .main{
+  height:auto;
+}
 
 /*top & inside header*/
 .container header{
@@ -101,6 +102,9 @@ body a:hover{
   position: fixed;
   top:55%;
   z-index: 20000;
+}
+.inside .container header{
+  position:relative;
 }
 .container header #banner{
   width:100%;
@@ -158,7 +162,7 @@ nav ul.nav-list a:hover,
   /*position:fixed;*/
   width:100%;
   z-index:200;
-  padding-top:20px;
+  padding-top:80px;
 }
 .container nav#inside-top ul{
   max-width:600px;
@@ -187,6 +191,11 @@ nav ul.nav-list a:hover,
   max-width:600px;
   margin:0 auto;
 }
+.inside section.bbq-item{
+  padding-bottom: 30px;
+  margin-bottom: 60px;
+  border-bottom: 5px solid #000;
+}
 .inside .content section h2{
   color: #fff;
   font-family: "Gill Sans","Arial Black",arial,helvetica,sans-serif;
@@ -201,18 +210,26 @@ nav ul.nav-list a:hover,
   font-family: 'Lucida Bright',georgia,"times new roman",serif;
   font-size: 18px;
   line-height: 25px;
-  color: #000;
+  color: #d3d3d3;
   margin: 18px 0;
 }
-.content section ul{}
-.content section ul li{
-    margin-bottom:15px;
+.content section p strong{
+  font-family:"Gill Sans","Arial Black",arial,helvetica,sans-serif;
 }
-.content section ul li:hover a h3{
+.content section ul{}
+.inside .content section ul li{
+    padding-bottom:20px;
+    border-bottom:1px solid #666;
+    margin-bottom:25px;
+}
+.inside .content section ul li:last-child{
+  border-bottom:none;
+}
+.inside .content section ul li:hover a h3{
   text-decoration:underline;
 }
-.content section ul li a{}
-.content section li a h6{
+.inside .content section ul li a{}
+.inside .content section li a h6{
   font-family: arial,helvetica,sans-serif;
   font-weight: normal;
   font-size: 11px;
@@ -231,6 +248,24 @@ nav ul.nav-list a:hover,
   font-family: georiga,"times new roman",serif;
   font-size: 15px;
   line-height: 19px;
+}
+.content .inside-photo{
+  width:100%;
+  margin-bottom:12px;
+}
+.content .inside-photo img{
+  width:100%;
+  margin:0;
+  display:inline-block;
+}
+.content .inside-photo .credit{
+  font-family: arial,helvetica,sans-serif;
+  font-size:10px;
+  text-transform: uppercase;
+  text-align: right;
+  color: #595959;
+  display: inline-block;
+  width:100%;
 }
 
 /*about*/
@@ -299,9 +334,10 @@ nav ul.nav-list a:hover,
 /*social*/
 #social{
   width:107px;
-  position:fixed;
+  position:absolute;
   top:2%;
   right:1%;
+  z-index: 100003;
 }
 #social ul{
   width:100%;
@@ -331,4 +367,45 @@ table.bit-events td{
   text-transform: none!important;
 }
 
-@import('news.css');
+/*news*/
+#nadastromNewsFeed{
+  margin-top:40px;
+}
+#nadastromNewsFeed .body{
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #666;
+  font-family:arial,helvetica,sans-serif;
+  font-size:14px;
+  color:#d3d3d3;
+  width:100%;
+  position:relative;
+}
+#nadastromNewsFeed .body time{
+  position:absolute;
+  top:0;
+  width:25%;
+  display:inline-block;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #999;
+}
+#nadastromNewsFeed .body time .caption{
+  position:relative;
+  top:20px;
+}
+#nadastromNewsFeed .body time .caption p{
+  font-family:arial,helvetica,sans-serif;
+  font-size:14px;
+  line-height:19px;
+  color:#d3d3d3;
+  text-transform: none;
+}
+#nadastromNewsFeed .body img,
+#nadastromNewsFeed .body .video-player{
+  width:70%;
+  margin-left:30%;
+}
+#nadastromNewsFeed .body .video-player iframe{
+  width:100%;
+}

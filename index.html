@@ -14,7 +14,7 @@
   <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
   <!--<script type="text/javascript" src="js/underscore-min.js"></script>
   <script type="text/javascript" src="js/backbone-min.js"></script>-->
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
   <script type="text/javascript" src="js/ba-bbq.min.js"></script>
   <!--plugins
   <script type="text/javascript" src="http://files.nadastrom.com/js/ba-hashchange.min.js"></script>-->
@@ -25,14 +25,32 @@
 
 <div class="container">
 
+  <div id="top-bar">
+    <div class="radio">
+          <img class="yeti-icon" src="images/yeti-black.png" />
+          <!--test player-->
+          <div class="player info">
+            <a href="http://soundcloud.com/nadastrom/sets/website-player/" class="sc-player"><!--PLAYER IFRAME GOES HERE--></a>
+          </div>
+        </div>
+        <div id="social">
+            <ul>
+              <li class="opacity"><a href="https://www.facebook.com/nadastrom"><img src="images/social/facebook.png"></a></li>
+              <li class="opacity"><a href="http://instagram.com/nadastrom"><img src="images/social/twitter.png"></a></li>
+              <!--<li class="opacity"><a href=""><img src="images/social/soundcloud.png"></a></li>-->
+              <li class="opacity"><a href="https://twitter.com/nadastrom"><img src="images/social/instagram.png"></a></li>
+            </ul>
+          </div> 
+  </div>
+
   <nav id="inside-top" class="clearfix">
     <a href='#'><img src="images/nadastrom-newlogo-black.png" /></a>
     <ul class="nav-list">
       <li id="about"><a href="#about" class="color">About</a></li>
       <li id="shows"><a href="#shows" class="color">Shows</a></li>
       <li id="news"><a href="#news" class="color">News</a></li>
-      <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
       <li id="press"><a href="#press" class="color">Press</a></li>
+      <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music &raquo;</a></li>
     </ul>
   </nav>
 
@@ -44,44 +62,19 @@
           <img src="images/transparent.png" data-path="images/cover/nadastrom-yellow_" data-ratio=".688125" data-widths="[400,600,800,1024,1280,1600]"/>
         </div>
 
-        <div class="radio">
-          <img class="yeti-icon" src="images/yeti-black.png" />
-      <!--     <div class="info">
-            <h3>Now Playing</h3>
-            <nav>
-              <i class="prev"></i>
-              <i class="playpause"></i>
-              <i class="next"></i>
-            </nav>
-          </div> -->
-
-          <!--test player-->
-          <div class="player info">
-            <a href="http://soundcloud.com/nadastrom/sets/website-player/" class="sc-player"><!--PLAYER IFRAME GOES HERE--></a>
-          </div>
-        </div>
-        <header>
+        <header id="header-home">
 
           <div id="banner">
             <img src="images/nadastrom-newlogo-black.png" />
-          </div>
-
-          <div id="social">
-            <ul>
-              <li class="opacity"><a href="https://www.facebook.com/nadastrom"><img src="images/social/facebook.png"></a></li>
-              <li class="opacity"><a href="http://instagram.com/nadastrom"><img src="images/social/twitter.png"></a></li>
-              <!--<li class="opacity"><a href=""><img src="images/social/soundcloud.png"></a></li>-->
-              <li class="opacity"><a href="https://twitter.com/nadastrom"><img src="images/social/instagram.png"></a></li>
-            </ul>
-          </div>      
+          </div>     
 
           <nav id="main">
             <ul class="nav-list">
                 <li id="about"><a href="#about" class="color">About</a></li>
                 <li id="shows"><a href="#shows" class="color">Shows</a></li>
                 <li id="news"><a href="#news" class="color">News</a></li>
-                <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music</a></li>
                 <li id="press"><a href="#press" class="color">Press</a></li>
+                <li id="music"><a href="https://soundcloud.com/nadastrom" class="color">Music &raquo;</a></li>
             </ul>
           </nav>
 
@@ -98,30 +91,6 @@
     </div>
 
   </div>
-
-    <!-- <footer class="clearfix">
-      <div class="yeti">
-        <img class="yeti-icon" src="images/yeti-black.png" />
-      </div>
-    </footer> -->
-
-<!--   <footer class="clearfix">
-    <div id="contact-box">
-        <h3>Contact</h3>
-        <ul class="contact-list">
-          <li>General Inquiry: <a href="mailto:no.nonsense.manage@gmail.com">no.nonsense.manage@gmail.com</a></li>
-          <li>Promos: <a href="mailto:diablumasound@gmail.com">diablumasound@gmail.com</a></li>
-          <li>Booking (North America): <a href="mailto:brad@windishagency.com">brad@windishagency.com</a></li>
-          <li>Booking (Europe): <a href="mailto:tom@elasticartist.net">tom@elasticartist.net</a></li>
-        </ul>
-      </div>
-      <div class="yeti">
-        <img class="yeti-icon" src="images/yeti.png" />
-      </div>
-      <div id="radio-box">
-        <h4>Nadastrom Radio</h4>
-      </div>
-    </footer> -->
 
 </div>
 

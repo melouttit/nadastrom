@@ -7,11 +7,11 @@ $(document).ready(function() {
 		// modify these
 		
 		$.tumblrNews = "http://nadastrom.tumblr.com/api/read/json?tagged=news&callback=?";
-		$.tumblrMusic = "http://nadastrom.tumblr.com/api/read/json?tagged=music&callback=?";
+		// $.tumblrMusic = "http://nadastrom.tumblr.com/api/read/json?tagged=music&callback=?";
 		
 		$.tumblrNewsDiv = $('#nadastromNewsFeed');
 		// $.tumblrNewsPageDiv = $('#nadastromNewsPageFeed');
-		$.tumblrMusicDiv = $('#nadastromMusicFeed');
+		// $.tumblrMusicDiv = $('#nadastromMusicFeed');
 		
 		$.tumblr.numPostsToDisplay = 1;
 		
@@ -112,13 +112,13 @@ Format  Description                                                             
     	{
     		
 		// container.append("<div class='date'>" + dateFmt + "</div>");
-    		container.append("<time>" + dateFmt + "</time><a class='title' href='" + post.url + "' target='_blank'>" + post["regular-title"] + "</a>");
+    		container.append("<div class='body regular'><time>Posted: " + dateFmt + "</time>" + post["regular-body"] + "</a>");
     		break;
     	}
     	case "link":
     	{				
 
-    		container.append("<time>" + dateFmt + "</time><a class='title' href='" + post["link-url"] + "' target='_blank'>" + post["link-text"] + "</a>");
+    		container.append("<time>Posted: " + dateFmt + "</time><a class='title' href='" + post["link-url"] + "' target='_blank'>" + post["link-text"] + "</a>");
     		break;
     	}		    	
     	case "quote":
@@ -134,9 +134,9 @@ Format  Description                                                             
     	{					
     		// valid values are: photo-url-[75, 100, 250, 400, 500, 1280]
     		
-    		container.append("<div class='body photo'><time>" + dateFmt + "</time>" + 
-    			// "<img class='image-promo' src='" + post["photo-url-75"] + "'/>" + 
-    			"<a class='title' href='" + post.url + "' target='_blank'>View Image &raquo;</a>" + 
+    		container.append("<div class='body photo clearfix'><time>Posted: " + dateFmt + "</time>" +
+          "<img class='image-promo' src='" + post["photo-url-500"] + "'/>" + 
+    			// "<a class='title' href='" + post.url + "' target='_blank'>View Image &raquo;</a>" + 
     			"</div>");
     		break;
     	}
@@ -171,7 +171,7 @@ Format  Description                                                             
     	case "video":
     	{
 						
-    		container.append("<div class='body video'><time>" + dateFmt + "</time><a class='title' href='" + post.url + "' target='_blank'>" + post["video-title"] + "</a></div>");
+    		container.append("<div class='body video'><time>Posted: " + dateFmt + "<div class='caption'>" + post["video-caption"] + "</div></time><div class='video-player'>" + post["video-player"] + "</div></div>");
     		// resize our video code if possible
     		var vdo = post["video-player"];
     		var re = new RegExp('width=\"([a-zA-Z0-9]*)\"', 'g');
