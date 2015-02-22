@@ -68,6 +68,16 @@
   float:left;
   cursor:pointer;
   margin-right:13px;
+  opacity:1;
+  -webkit-transition:opacity .2s ease-in;
+  -moz-transition:opacity .2s ease-in;
+  -ms-transition:opacity .2s ease-in;
+  -o-transition:opacity .2s ease-in;
+  transition:opacity .2s ease-in;
+}
+
+.sc-player .sc-controls a:hover{
+  opacity:.5;
 }
 
 .sc-player .sc-controls a.sc-play, .sc-player .sc-controls a.sc-pause{

@@ -134,7 +134,7 @@ Format  Description                                                             
     	{					
     		// valid values are: photo-url-[75, 100, 250, 400, 500, 1280]
     		
-    		container.append("<div class='body photo clearfix'><time>Posted: " + dateFmt + "</time>" +
+    		container.append("<div class='body photo clearfix'><time>Posted: " + dateFmt + "<div class='caption'>" + post["photo-caption"] + "</div></time>" +
           "<img class='image-promo' src='" + post["photo-url-500"] + "'/>" + 
     			// "<a class='title' href='" + post.url + "' target='_blank'>View Image &raquo;</a>" + 
     			"</div>");
