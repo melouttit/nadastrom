@@ -63,6 +63,13 @@ body a:hover{
   -o-transition:color .3s ease-in;
   transition:color .3s ease-in;
 }
+.bg{
+  -webkit-transition:background .3s ease-in;
+  -moz-transition:background .3s ease-in;
+  -ms-transition:background .3s ease-in;
+  -o-transition:background .3s ease-in;
+  transition:background .3s ease-in;
+}
 .yeti{
   width: 50px;
   position: fixed;
@@ -125,7 +132,8 @@ nav ul.nav-list{
   width:70%;
   margin:0 auto;
 }
-nav ul.nav-list li{
+nav ul.nav-list li a{
+  display:block;
   width:18.4%;
   margin-right:2%;
   float:left;
@@ -135,9 +143,10 @@ nav ul.nav-list li{
   cursor:pointer;
   padding: 12px 0;
   border-radius: 5px;
-  background: #000;
+  background: rgba(100,100,100,.6);
+  min-width:100px;
 }
-nav ul.nav-list li:last-child{
+nav ul.nav-list li:last-child a{
   margin-right:0;
 }
 nav ul.nav-list li a{
@@ -146,15 +155,20 @@ nav ul.nav-list li a{
   font-weight:bold;
   text-transform:uppercase;
   text-decoration:none;
-  display: block;
-  margin: 0 auto;
+/*  display: block;
+  margin: 0 auto;*/
 }
-nav ul.nav-list a:hover,
-.container nav#inside-top ul li a:hover{
-  color:#f5e15c;
+nav ul.nav-list li a:hover{
+  background:rgba(100,100,100,1);
+  color:#c563d3;
+}
+.container nav#inside-top ul li:hover a{
+  /*color:#f5e15c;*/
+  /*color:#ba8f3b;*/
+  color:#c563d3;
 }
 .container nav#inside-top img{
-  margin: 10px auto;
+  margin: 0 auto 20px auto;
   width: 400px;
   display: block;
 }
@@ -162,7 +176,7 @@ nav ul.nav-list a:hover,
   /*position:fixed;*/
   width:100%;
   z-index:200;
-  padding-top:80px;
+  padding-top:22px;
 }
 .container nav#inside-top ul{
   max-width:600px;
@@ -177,6 +191,7 @@ nav ul.nav-list a:hover,
 }
 .container nav#inside-top ul li.active a{
   color:#DEBA60;
+  /*color:#c563d3;*/
 }
 
 /*content*/
@@ -186,7 +201,7 @@ nav ul.nav-list a:hover,
   background:#000;
   position:absolute;
   bottom:0;*/
-  padding-top:20px;
+  padding-top:30px;
   width:80%;
   max-width:600px;
   margin:0 auto;
@@ -208,7 +223,7 @@ nav ul.nav-list a:hover,
 .content section{}
 .content section p{
   font-family: 'Lucida Bright',georgia,"times new roman",serif;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25px;
   color: #d3d3d3;
   margin: 18px 0;
@@ -335,8 +350,8 @@ nav ul.nav-list a:hover,
 #social{
   width:107px;
   position:absolute;
-  top:2%;
-  right:1%;
+  top:22px;
+  left:30px;
   z-index: 100003;
 }
 #social ul{
