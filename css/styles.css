@@ -225,6 +225,7 @@ nav ul.nav-list li a:hover{
   font-family: 'Lucida Bright',georgia,"times new roman",serif;
   font-size: 17px;
   line-height: 25px;
+  font-weight:300;
   color: #d3d3d3;
   margin: 18px 0;
 }
@@ -284,6 +285,20 @@ nav ul.nav-list li a:hover{
 }
 
 /*about*/
+#contact{
+  margin-bottom:30px;`
+}
+#contact p{
+  font-family: arial,helvetica,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin:0;
+  text-transform: uppercase;
+}
+#contact p a{
+  text-transform: none;
+  font-size:16px;
+}
 
 /*radio*/
 .radio{
@@ -362,6 +377,7 @@ nav ul.nav-list li a:hover{
   margin-right:12px;
   opacity:1;
   width:26px;
+  opacity:.7;
 }
 #social ul li:last-child{
   margin-right:0;
@@ -370,7 +386,7 @@ nav ul.nav-list li a:hover{
   margin:0 auto;
 }
 #social ul li:hover{
-  opacity:.5;
+  opacity:1;
 }
 
 /*music*/
