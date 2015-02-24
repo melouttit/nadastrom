@@ -118,7 +118,7 @@ Format  Description                                                             
     	case "link":
     	{				
 
-    		container.append("<time>Posted: " + dateFmt + "</time><a class='title' href='" + post["link-url"] + "' target='_blank'>" + post["link-text"] + "</a>");
+    		container.append("<div class='body link'><time>Posted: " + dateFmt + "</time><div class='desc'><a class='title' href='" + post["link-url"] + "' target='_blank'>" + post["link-text"] + " &raquo;</a><p>"+post["link-description"]+"</p></div></div>");
     		break;
     	}		    	
     	case "quote":

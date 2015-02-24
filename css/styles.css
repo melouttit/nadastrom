@@ -449,3 +449,32 @@ table.bit-events td{
   text-transform: uppercase;
   text-align:right;
 }
+#nadastromNewsFeed .body.link a.title{
+  font-size:16px;
+  line-height:22px;
+}
+#nadastromNewsFeed .body.link .desc{
+  width:60%;
+  margin-left:40%;
+}
+#nadastromNewsFeed .body.link .desc blockquote{
+  background:none;
+  border:none;
+  position:relative;
+  padding:0;
+  font-family: georgia,"times new roman"serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #d3d3d3;
+  text-transform: none;
+  font-style: normal;
+}
+#nadastromNewsFeed .body.link .desc blockquote:before{
+  content:'"';
+  position: absolute;
+  left: -30px;
+  font-size: 60px;
+  color: #fff;
+  top: 1px;
+  line-height: 54px;
+}
