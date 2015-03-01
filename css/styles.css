@@ -138,6 +138,7 @@ nav ul.nav-list li a{
   display:block;
   width:18.4%;
   margin-right:2%;
+  margin-bottom:2%;
   float:left;
   color:#fff;
   text-align:center;
@@ -157,6 +158,7 @@ nav ul.nav-list li a{
   font-weight:bold;
   text-transform:uppercase;
   text-decoration:none;
+  margin-bottom:2%;
 /*  display: block;
   margin: 0 auto;*/
 }
@@ -482,12 +484,8 @@ table.bit-events td{
 }
 
 /* mobile styles */
-@media only screen and (max-width : 760px) {
-
-  .container header #banner img{
-    width:90%;
-    margin:0 auto;
-    display:block;
-  }
-
+.mobile .container header #banner img{
+  width:90%;
+  margin:0 auto;
+  display:block;
 }

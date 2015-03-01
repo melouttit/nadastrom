@@ -24,10 +24,8 @@ $(document).ready(function(){
       var socialimg = $('#social ul li img');
 
       //check for mobile
-      console.log(Modernizr.mq('only all and (max-width: 767px)'));
-      if(Modernizr.touch || Modernizr.mq('only all and (max-width: 480px)')){
-        console.log("MOBILE");
-      }
+      $isMobile = yeti.checkForMobile();
+      console.log($isMobile);
 
       var bgimgwidth = yeti.chooseImageSize();
       yeti.sizeBackgroundImage(bgimgwidth);
@@ -42,6 +40,7 @@ $(document).ready(function(){
       var yeti = this;
       var bgimgwidth = yeti.chooseImageSize();
       yeti.sizeBackgroundImage(bgimgwidth);
+      $isMobile = yeti.checkForMobile();
     },
     pageManager:function(){
 
@@ -100,6 +99,20 @@ $(document).ready(function(){
       });
 
       $(window).trigger('hashchange');
+
+    },
+    checkForMobile:function(){
+
+      if(Modernizr.touch && Modernizr.mq('only all and (max-width: 760px)')){
+        $('html').addClass('mobile');
+        var isMobile = true;
+      } else {
+        $('html').removeClass('mobile');
+        var isMobile = false;
+      }
+
+      console.log(isMobile);
+      return isMobile;
 
     },
     updateNav:function(page){
@@ -168,7 +181,7 @@ $(document).ready(function(){
 
       //calculate new margins
       var extrawidth = iw - ww;
-      var ml = extrawidth / 2;
+      var ml = (!$isMobile) ? extrawidth / 2 : extrawidth / 1.3 ;
 
       var extraheight = ih - wh;
       var mt = extraheight / 2;
