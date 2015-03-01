@@ -10,7 +10,6 @@ $(document).ready(function(){
 
     init:function(){
 
-      console.log("YETI READY");
       var yeti = this;
 
       //dom elements
