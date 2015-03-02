@@ -25,7 +25,6 @@ $(document).ready(function(){
 
       //check for mobile
       $isMobile = yeti.checkForMobile();
-      console.log($isMobile);
 
       var bgimgwidth = yeti.chooseImageSize();
       yeti.sizeBackgroundImage(bgimgwidth);
@@ -111,7 +110,6 @@ $(document).ready(function(){
         var isMobile = false;
       }
 
-      console.log(isMobile);
       return isMobile;
 
     },
@@ -213,7 +211,7 @@ $(document).ready(function(){
         } else if($activeItem > $newsLength){
           $activeItem = $newsLength ;
         }
-        console.log($activeItem);
+
         switchNewsItem();
       });
 
