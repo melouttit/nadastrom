@@ -163,19 +163,20 @@ body a:hover{
 
 /*top & inside nav*/
 nav#main{
-  margin-top:30px;
+  width:70%;
+  margin:30px auto 0 auto;
   height:45px;
 }
-.mobile nav#main ul{
-  width:100%;
-}
 nav ul.nav-list{
-  width:70%;
+  width:100%;
   margin:0 auto;
+}
+nav ul.nav-list li{
+  height:0;
 }
 nav ul.nav-list li a{
   display:block;
-  width:18.4%;
+  width:18.2%;
   margin-right:2%;
   margin-bottom:2%;
   float:left;
@@ -347,9 +348,7 @@ nav ul.nav-list li a:hover{
 }
 
 /*about*/
-#contact{
-  margin-bottom:30px;`
-}
+#contact{}
 #contact p{
   font-family: arial,helvetica,sans-serif;
   font-size: 13px;
