@@ -108,8 +108,11 @@ body a:hover{
   width: 100%;
   margin: 0 auto;
   position: fixed;
-  top:55%;
+  top:45%;
   z-index: 20000;
+}
+.mobile .container header{
+  top:35%;
 }
 .inside .container header{
   position:relative;
@@ -124,11 +127,47 @@ body a:hover{
   display:block;
 }
 
+/*header news item*/
+.newsitem{
+  width:70%;
+  max-width:430px;
+  margin:30px auto 0 auto;
+  background:rgba(100,100,100,.6);
+  border-radius:5px;
+  padding:15px;
+}
+.mobile .newsitem{
+  max-width:none;
+}
+.newsitem:hover{
+  background:rgba(100,100,100,1);
+}
+.newsitem img{
+  width:13%;
+  margin-right:15px;
+  float:left;
+}
+.mobile .newsitem img{
+  width:25%;
+  margin-right:20px;
+}
+.newsitem span{
+  font-family:"Arial Black",arial,helvetica,sans-serif;
+  font-size:23px;
+  line-height:27px;
+}
+.mobile .newsitem span{
+  font-size: 42px;
+  line-height: 53px;
+}
 
 /*top & inside nav*/
 nav#main{
   margin-top:30px;
-  height:30px;
+  height:45px;
+}
+.mobile nav#main ul{
+  width:100%;
 }
 nav ul.nav-list{
   width:70%;
@@ -149,6 +188,15 @@ nav ul.nav-list li a{
   background: rgba(100,100,100,.6);
   min-width:100px;
 }
+.mobile nav#main{
+  margin:30px auto 0 auto;
+  width:50%;
+  height:auto;
+}
+.mobile nav#main ul.nav-list li a{
+  width:100%;
+  padding:20px 0;
+}
 nav ul.nav-list li:last-child a{
   margin-right:0;
 }
@@ -161,6 +209,10 @@ nav ul.nav-list li a{
   margin-bottom:2%;
 /*  display: block;
   margin: 0 auto;*/
+}
+.mobile nav#main ul.nav-list li a{
+  font-size:25px;
+  line-height:25px;
 }
 nav ul.nav-list li a:hover{
   background:rgba(100,100,100,1);
@@ -209,6 +261,12 @@ nav ul.nav-list li a:hover{
   width:80%;
   max-width:600px;
   margin:0 auto;
+}
+.mobile .inside .content{
+  width:auto;
+  max-width: none;
+  margin-left:66px;
+  margin-right:66px;
 }
 .inside section.bbq-item{
   padding-bottom: 30px;

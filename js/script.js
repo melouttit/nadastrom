@@ -25,6 +25,7 @@ $(document).ready(function(){
 
       //check for mobile
       $isMobile = yeti.checkForMobile();
+      console.log($isMobile);
 
       var bgimgwidth = yeti.chooseImageSize();
       yeti.sizeBackgroundImage(bgimgwidth);
@@ -102,7 +103,7 @@ $(document).ready(function(){
     },
     checkForMobile:function(){
 
-      if(Modernizr.touch && Modernizr.mq('only all and (max-width: 760px)')){
+      if(Modernizr.touch || Modernizr.mq('only all and (max-width: 760px)')){
         $('html').addClass('mobile');
         var isMobile = true;
       } else {
