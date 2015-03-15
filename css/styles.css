@@ -315,6 +315,42 @@ nav ul.nav-list li a:hover{
   text-transform: uppercase;
   line-height: 16px;
 }
+.inside .content section ul.music-list{
+  margin-bottom:30px;
+}
+.inside .content section ul.music-list li{
+  border-bottom:none;
+  width: 287px;
+  float: left;
+  margin-right: 25px;
+  padding: 20px 0px;
+  margin-bottom:0;
+  box-sizing: border-box;
+}
+.inside .content section ul.music-list li:nth-child(2n){
+  margin-right: 0;
+}
+.inside .content section ul.music-list li i{
+  position:relative;
+  display: block;
+  height: 90px;
+  background: rgba(255,255,255,.7);
+  border-radius: 9px;
+  padding: 10px 20px;
+}
+.inside .content section ul.music-list li:hover i{
+  background:#c563d3;
+}
+.inside .content section ul.music-list li i img{
+  position:relative;
+  width:100%;
+  display:block;
+  top:25%;
+}
+.inside .content section ul.music-list li:first-child i img{
+  top:5%;
+}
+.inside .content section ul.music-list li a{}
 .content section li a h3{
   font-family: "Lucida Bright",georgia,"times new roman",serif;
   font-size: 20px;
